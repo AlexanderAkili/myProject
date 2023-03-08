@@ -1,0 +1,17 @@
+import requests
+from lxml import etree
+
+def main():
+	# 提交url
+	url = "https://tieba.baidu.com/p/2256306796"
+	# 获取响应
+	Response = requests.get(url)
+	#print(Response.text)
+	# 解析网页
+	selector = etree.HTML(Response.text)
+	img_url_list = selector.xpath('//div[@class="d_post_content j_d_post_content "]/img/@src')
+	# 提取标签
+	print(img_url_list)
+
+if __name__ == "__main__":
+	main()
