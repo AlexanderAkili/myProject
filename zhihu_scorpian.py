@@ -1,6 +1,6 @@
 # code UTF-8
 #  
-# Author: PinkScorpian
+# 
 import re
 import urllib.request
 
